@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Mail, Phone, MapPin, Github, Linkedin, ChevronDown } from "lucide-react";
-import profileImg from "@/assets/profile.jpg";
+import Avatar3D from "@/components/Avatar3D";
 
 export default function HeroSection() {
   return (
@@ -53,9 +53,7 @@ export default function HeroSection() {
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.7, delay: 0.2 }}
         >
-          <div className="w-56 h-56 md:w-72 md:h-72 rounded-full overflow-hidden glow-border ring-2 ring-primary/30 ring-offset-4 ring-offset-background">
-            <img src={profileImg} alt="Hoàng Quốc Khánh" className="w-full h-full object-cover" />
-          </div>
+          <Avatar3D />
           <div className="absolute -bottom-2 -right-2 bg-primary text-primary-foreground text-xs font-mono font-semibold px-3 py-1.5 rounded-full">
             GPA 3.04/4
           </div>
