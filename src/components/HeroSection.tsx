@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Mail, Phone, MapPin, Github, Linkedin, ChevronDown } from "lucide-react";
-import profileImg from "@/assets/profile.jpg";
+import Avatar3D from "@/components/Avatar3D";
 
 export default function HeroSection() {
   return (
