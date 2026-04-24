@@ -10,11 +10,11 @@ import * as THREE from "three";
 // ============================================================
 
 // --- Uncomment đoạn này khi có file GLB ---
-// import { useGLTF } from "@react-three/drei";
-// function GLBModel() {
-//   const { scene } = useGLTF("/models/nhanvat.glb");
-//   return <primitive object={scene} scale={1.5} position={[0, -1, 0]} />;
-// }
+import { useGLTF } from "@react-three/drei";
+function GLBModel() {
+  const { scene } = useGLTF("/models/nhanvat.glb");
+  return <primitive object={scene} scale={1.5} position={[0, -1, 0]} />;
+}
 
 function Head() {
   const ref = useRef<THREE.Mesh>(null);
@@ -203,7 +203,7 @@ export default function Avatar3D() {
         <pointLight position={[0, 2, 3]} intensity={0.8} color="#2dd4bf" />
         <Suspense fallback={null}>
           {/* Thay StylizedCharacter bằng GLBModel khi có file */}
-          <StylizedCharacter />
+          <GLBModel />
         </Suspense>
         <OrbitControls
           enableZoom={false}
